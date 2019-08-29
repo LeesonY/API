@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2019-07-17 11:08:10</p>
+                <p class='attribute'><strong>Duration: </strong>2.40 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 10, Pass: 10</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>API_2.test_cases.test_cases.TestCases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_01</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试Register模里面第1条测试用例：正常注册
+实际结果为：{'code': '20110', 'status': 0, 'msg': '手机号码已被注册', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_02</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试Register模里面第2条测试用例：手机号为空
+实际结果为：{'code': '20103', 'status': 0, 'msg': '手机号不能为空', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_03</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试Register模里面第3条测试用例：密码长度小于6
+实际结果为：{'code': '20108', 'status': 0, 'msg': '密码长度必须为6~18', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_04</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试Register模里面第4条测试用例：手机号小于11位
+http请求出错了，错误是：{'code': '20109', 'status': 0, 'msg': '手机号码格式不正确', 'data': None} != {'code': '20108', 'status': 0, 'msg': '密码长度必须为6~18', 'data': None}
+- {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?               ^                         ^^^ ^^^^^
+
++ {'code': '20108', 'data': None, 'msg': '密码长度必须为6~18', 'status': 0}
+?               ^                         ^ ^^^^^^^^^
+
+实际结果为：{'code': '20108', 'status': 0, 'msg': '密码长度必须为6~18', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_05</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试Register模里面第5条测试用例：已注册手机号再次注册
+实际结果为：{'code': '20110', 'status': 0, 'msg': '手机号码已被注册', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_06</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试login模里面第6条测试用例：正常登陆
+http请求出错了，错误是：{'code': '10001', 'status': 1, 'msg': '成功', 'data': None} != {'code': '10001', 'status': 1, 'msg': '登录成功', 'data': None}
+- {'code': '10001', 'data': None, 'msg': '成功', 'status': 1}
++ {'code': '10001', 'data': None, 'msg': '登录成功', 'status': 1}
+?                                         ++
+
+实际结果为：{'code': '10001', 'status': 1, 'msg': '登录成功', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_07</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试login模里面第7条测试用例：用户名输入为空
+http请求出错了，错误是：{'code': '20103', 'status': 0, 'msg': '参数错误：参数不能为空', 'data': None} != {'code': '20103', 'status': 0, 'msg': '手机号不能为空', 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?                                         ^^^
+
+实际结果为：{'code': '20103', 'status': 0, 'msg': '手机号不能为空', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_08</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试login模里面第8条测试用例：密码输入为空
+http请求出错了，错误是：{'code': '20103', 'status': 0, 'msg': '参数错误：参数不能为空', 'data': None} != {'code': '20103', 'status': 0, 'msg': '密码不能为空', 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?                                         ^^
+
+实际结果为：{'code': '20103', 'status': 0, 'msg': '密码不能为空', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_09</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试login模里面第9条测试用例：正确的用户名，对应密码错误
+http请求出错了，错误是：{'code': '20111', 'status': 0, 'msg': '用户名或者密码错误', 'data': None} != {'code': '20111', 'status': 0, 'msg': '用户名或密码错误', 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+实际结果为：{'code': '20111', 'status': 0, 'msg': '用户名或密码错误', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_cases_10</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>------正在测试login模里面第10条测试用例：未注册手机号登陆
+http请求出错了，错误是：{'code': '20111', 'status': 0, 'msg': '用户名或者密码错误', 'data': None} != {'code': '20111', 'status': 0, 'msg': '用户名或密码错误', 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+实际结果为：{'code': '20111', 'status': 0, 'msg': '用户名或密码错误', 'data': None}
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 10, Pass: 10 -- Duration: 2.40 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

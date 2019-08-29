@@ -1,0 +1,285 @@
+2019-07-18 09:47:33,647-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第1条测试用例：正常注册
+2019-07-18 09:47:33,648-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379914','pwd':'123456','regname':'lemonchupan'}", 'Method': 'get', 'Title': '正常注册', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 1, 'ExpectedResult': "{'msg': '手机号码已被注册', 'status': 0, 'data': None, 'code': '20110'}"}
+2019-07-18 09:47:33,896-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号码已被注册', 'code': '20110', 'status': 0, 'data': None}
+2019-07-18 09:47:33,897-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第2条测试用例：手机号为空
+2019-07-18 09:47:33,899-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'','pwd':'123456','regname':'lemonchupan'}", 'Method': 'get', 'Title': '手机号为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 2, 'ExpectedResult': "{'data': None, 'status': 0, 'code': '20103', 'msg': '手机号不能为空'}"}
+2019-07-18 09:47:34,126-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号不能为空', 'code': '20103', 'status': 0, 'data': None}
+2019-07-18 09:47:34,127-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第3条测试用例：密码长度小于6
+2019-07-18 09:47:34,128-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'12345','regname':'lemonchupan'}", 'Method': 'post', 'Title': '密码长度小于6', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 3, 'ExpectedResult': "{'status':0,'code':'20108','data': None,'msg':'密码长度必须为6~18'}"}
+2019-07-18 09:47:34,349-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '密码长度必须为6~18', 'code': '20108', 'status': 0, 'data': None}
+2019-07-18 09:47:34,355-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第4条测试用例：手机号小于11位
+2019-07-18 09:47:34,356-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'1857437993','pwd':'12345','regname':'lemonchupan'}", 'Method': 'post', 'Title': '手机号小于11位', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 4, 'ExpectedResult': "{'status':0,'code':'20109','data': None,'msg':'手机号码格式不正确'}"}
+2019-07-18 09:47:34,422-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '手机号码格式不正确', 'code': '20109', 'status': 0, 'data': None} != {'msg': '密码长度必须为6~18', 'code': '20108', 'status': 0, 'data': None}
+- {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?               ^                         ^^^ ^^^^^
+
++ {'code': '20108', 'data': None, 'msg': '密码长度必须为6~18', 'status': 0}
+?               ^                         ^ ^^^^^^^^^
+
+2019-07-18 09:47:34,587-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第5条测试用例：已注册手机号再次注册
+2019-07-18 09:47:34,588-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456','regname':'lemonchupan'}", 'Method': 'post', 'Title': '已注册手机号再次注册', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 5, 'ExpectedResult': "{'status':0,'code':'20110','data': None,'msg':'手机号码已被注册'}"}
+2019-07-18 09:47:34,850-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号码已被注册', 'code': '20110', 'status': 0, 'data': None}
+2019-07-18 09:47:34,854-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第6条测试用例：正常登陆
+2019-07-18 09:47:34,857-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Method': 'post', 'Title': '正常登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 6, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'成功'}"}
+2019-07-18 09:47:34,920-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '成功', 'code': '10001', 'status': 1, 'data': None} != {'msg': '登录成功', 'code': '10001', 'status': 1, 'data': None}
+- {'code': '10001', 'data': None, 'msg': '成功', 'status': 1}
++ {'code': '10001', 'data': None, 'msg': '登录成功', 'status': 1}
+?                                         ++
+
+2019-07-18 09:47:35,080-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第7条测试用例：用户名输入为空
+2019-07-18 09:47:35,081-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'','pwd':'123456'}", 'Method': 'post', 'Title': '用户名输入为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 7, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-18 09:47:35,148-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '参数错误：参数不能为空', 'code': '20103', 'status': 0, 'data': None} != {'msg': '手机号不能为空', 'code': '20103', 'status': 0, 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?                                         ^^^
+
+2019-07-18 09:47:35,314-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第8条测试用例：密码输入为空
+2019-07-18 09:47:35,315-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':''}", 'Method': 'post', 'Title': '密码输入为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 8, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-18 09:47:35,379-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '参数错误：参数不能为空', 'code': '20103', 'status': 0, 'data': None} != {'msg': '密码不能为空', 'code': '20103', 'status': 0, 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?                                         ^^
+
+2019-07-18 09:47:35,547-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第9条测试用例：正确的用户名，对应密码错误
+2019-07-18 09:47:35,548-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'1234567'}", 'Method': 'post', 'Title': '正确的用户名，对应密码错误', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 9, 'ExpectedResult': "{'status':0,'code':'20111','data': None,'msg':'用户名或者密码错误'}"}
+2019-07-18 09:47:35,623-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '用户名或者密码错误', 'code': '20111', 'status': 0, 'data': None} != {'msg': '用户名或密码错误', 'code': '20111', 'status': 0, 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+2019-07-18 09:47:35,790-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第10条测试用例：未注册手机号登陆
+2019-07-18 09:47:35,792-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'13786268722','pwd':'123457'}", 'Method': 'get', 'Title': '未注册手机号登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 10, 'ExpectedResult': "{'status':0,'code':'20111','data': None,'msg':'用户名或者密码错误'}"}
+2019-07-18 09:47:35,860-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '用户名或者密码错误', 'code': '20111', 'status': 0, 'data': None} != {'msg': '用户名或密码错误', 'code': '20111', 'status': 0, 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+2019-07-24 10:18:08,478-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:18:08,481-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 1, 'Title': '正常登陆', 'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}"}
+2019-07-24 10:18:19,818-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:18:19,822-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常登陆', 'CaseId': 1, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Module': 'login', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Method': 'get'}
+2019-07-24 10:18:29,500-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:18:29,502-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 2, 'Title': '正常充值', 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-24 10:18:40,838-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:18:40,839-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常充值', 'CaseId': 2, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Method': 'post'}
+2019-07-24 10:18:50,509-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:18:50,510-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 3, 'Title': '不输入充值金额', 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':''}", 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}'}
+2019-07-24 10:19:01,848-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:19:01,849-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '不输入充值金额', 'CaseId': 3, 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Method': 'post'}
+2019-07-24 10:22:18,534-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:22:18,535-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Method': 'get', 'Title': '正常登陆', 'CaseId': 1, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Module': 'login', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login'}
+2019-07-24 10:22:39,554-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:22:39,556-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Method': 'post', 'Title': '正常充值', 'CaseId': 2, 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge'}
+2019-07-24 10:23:00,563-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:23:00,565-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Method': 'post', 'Title': '不输入充值金额', 'CaseId': 3, 'Params': "{'mobilephone':'18574379913','amount':''}", 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge'}
+2019-07-24 10:26:01,749-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:26:01,751-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 1, 'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}"}
+2019-07-24 10:26:22,775-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:26:22,777-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常充值', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 2, 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-24 10:26:43,784-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:26:43,786-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '不输入充值金额', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 3, 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':''}", 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}'}
+2019-07-24 10:30:35,687-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:30:35,689-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'CaseId': 1, 'Module': 'login', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Method': 'get'}
+2019-07-24 10:30:56,707-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:30:56,708-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常充值', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'CaseId': 2, 'Module': 'recharge', 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Method': 'post'}
+2019-07-24 10:31:17,716-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:31:17,718-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '不输入充值金额', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':''}", 'CaseId': 3, 'Module': 'recharge', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Method': 'post'}
+2019-07-24 10:37:08,739-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:37:08,741-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常登陆', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'CaseId': 1, 'Method': 'get', 'Module': 'login', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login'}
+2019-07-24 10:37:29,758-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:37:29,759-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常充值', 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'CaseId': 2, 'Method': 'post', 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge'}
+2019-07-24 10:37:50,765-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:37:50,766-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '不输入充值金额', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Params': "{'mobilephone':'18574379913','amount':''}", 'CaseId': 3, 'Method': 'post', 'Module': 'recharge', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge'}
+2019-07-24 10:38:38,378-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 10:38:38,380-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'Title': '正常登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'CaseId': 1, 'Module': 'login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}"}
+2019-07-24 10:38:59,398-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 10:38:59,400-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Title': '正常充值', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'CaseId': 2, 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}"}
+2019-07-24 10:39:20,406-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 10:39:20,408-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Title': '不输入充值金额', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'CaseId': 3, 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':''}"}
+2019-07-24 11:07:39,380-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:07:39,382-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Module': 'login', 'Title': '正常登陆', 'Method': 'get', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}"}
+2019-07-24 11:08:42,449-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:08:42,451-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Module': 'recharge', 'Title': '正常充值', 'Method': 'post', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}"}
+2019-07-24 11:09:33,409-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:09:33,411-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Module': 'login', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Method': 'get', 'CaseId': 1, 'Title': '正常登陆'}
+2019-07-24 11:09:33,558-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:09:33,559-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Module': 'recharge', 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Method': 'post', 'CaseId': 2, 'Title': '正常充值'}
+2019-07-24 11:09:33,666-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:09:33,668-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Module': 'recharge', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Method': 'post', 'CaseId': 3, 'Title': '不输入充值金额'}
+2019-07-24 11:09:45,518-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:09:45,521-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 3, 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Module': 'recharge', 'Title': '不输入充值金额', 'Method': 'post', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Params': "{'mobilephone':'18574379913','amount':''}"}
+2019-07-24 11:11:13,604-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:11:13,606-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'Module': 'login', 'CaseId': 1, 'Method': 'get'}
+2019-07-24 11:11:13,697-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:11:13,700-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Title': '正常充值', 'Module': 'recharge', 'CaseId': 2, 'Method': 'post'}
+2019-07-24 11:11:13,784-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:11:13,786-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','amount':''}", 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Title': '不输入充值金额', 'Module': 'recharge', 'CaseId': 3, 'Method': 'post'}
+2019-07-24 11:26:20,941-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:26:20,944-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'Title': '正常登陆', 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/login', 'Method': 'get', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Module': 'login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}"}
+2019-07-24 11:26:21,002-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:26:21,004-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'Title': '正常充值', 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Method': 'post', 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}"}
+2019-07-24 11:26:21,063-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:26:21,064-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 3, 'Title': '不输入充值金额', 'Url': 'http://47.107.168.87:3306/futureloan/mvc/api/member/recharge', 'Method': 'post', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':''}"}
+2019-07-24 11:27:49,984-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:27:49,988-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Method': 'get', 'CaseId': 1, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Module': 'login', 'Title': '正常登陆'}
+2019-07-24 11:28:11,008-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:28:11,010-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Method': 'post', 'CaseId': 2, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}", 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Module': 'recharge', 'Title': '正常充值'}
+2019-07-24 11:28:32,018-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:28:32,019-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Method': 'post', 'CaseId': 3, 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Module': 'recharge', 'Title': '不输入充值金额'}
+2019-07-24 11:30:15,321-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:30:15,324-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Method': 'get', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 1, 'Title': '正常登陆'}
+2019-07-24 11:30:36,342-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:30:36,343-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Method': 'post', 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 2, 'Title': '正常充值'}
+2019-07-24 11:30:57,350-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:30:57,352-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','amount':''}", 'Method': 'post', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 3, 'Title': '不输入充值金额'}
+2019-07-24 11:32:34,783-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 11:32:34,785-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'Title': '正常登陆', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Module': 'login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'CaseId': 1}
+2019-07-24 11:32:55,805-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 11:32:55,806-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Title': '正常充值', 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}', 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'CaseId': 2}
+2019-07-24 11:33:16,814-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 11:33:16,815-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Title': '不输入充值金额', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Module': 'recharge', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'CaseId': 3}
+2019-07-24 15:35:15,770-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 15:35:15,772-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 1, 'Title': '正常登陆'}
+2019-07-24 15:36:01,016-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 15:36:01,018-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'CaseId': 1, 'Title': '正常登陆', 'Module': 'login', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}"}
+2019-07-24 15:36:18,848-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 15:36:18,849-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 2, 'Title': '正常充值'}
+2019-07-24 15:37:04,079-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 15:37:04,080-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'CaseId': 2, 'Title': '正常充值', 'Module': 'recharge', 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}'}
+2019-07-24 15:37:21,901-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 15:37:21,902-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge', 'CaseId': 3, 'Title': '不输入充值金额'}
+2019-07-24 15:37:44,287-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 15:37:44,288-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/recharge', 'CaseId': 3, 'Title': '不输入充值金额', 'Module': 'recharge', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}'}
+2019-07-24 17:21:51,853-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第1条测试用例：正常注册
+2019-07-24 17:21:51,854-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'Method': 'get', 'Params': "{'mobilephone':'15096098898','pwd':'123456','regname':'lemonchupan'}", 'Title': '正常注册', 'ExpectedResult': "{'msg': '手机号码已被注册', 'status': 0, 'data': None, 'code': '20110'}", 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'sql': "{'msg': '手机号码已被注册', 'status': 0, 'data': None, 'code': '20110'}", 'Module': 'Register'}
+2019-07-24 17:21:51,856-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第2条测试用例：手机号为空
+2019-07-24 17:21:51,857-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'Method': 'get', 'Params': "{'mobilephone':'','pwd':'123456','regname':'lemonchupan'}", 'Title': '手机号为空', 'ExpectedResult': "{'data': None, 'status': 0, 'code': '20103', 'msg': '手机号不能为空'}", 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Module': 'Register'}
+2019-07-24 17:21:51,859-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-24 17:21:51,860-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Title': '正常登陆', 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/login', 'Module': 'login'}
+2019-07-24 17:21:52,062-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-24 17:21:52,064-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Title': '正常充值', 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge'}
+2019-07-24 17:21:52,237-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-24 17:21:52,239-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 3, 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Title': '不输入充值金额', 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/recharge', 'Module': 'recharge'}
+2019-07-25 09:58:57,456-INFO-my_log.py-api-log-[日志信息]:凡王之血，必以剑终！
+2019-07-26 15:45:58,277-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:45:58,279-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常登陆', 'sql': None, 'Module': 'login', 'Method': 'get', 'CaseId': 1, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'ExpectedResult': None, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login'}
+2019-07-26 15:45:58,479-INFO-my_log.py-api-log-[日志信息]:------正在测试Invets模里面第2条测试用例：正常投资
+2019-07-26 15:45:58,481-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Title': '正常投资', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Module': 'Invets', 'Method': 'post', 'CaseId': 2, 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':1000}", 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan'}
+2019-07-26 15:45:58,969-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'data': None, 'status': 0, 'code': '', 'msg': '密码错误'}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:48:28,435-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:48:28,437-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'CaseId': 1, 'Method': 'get', 'ExpectedResult': None, 'Module': 'login', 'sql': None, 'Title': '正常登陆'}
+2019-07-26 15:48:28,647-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:48:28,648-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'CaseId': 2, 'Method': 'post', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Module': 'Invest', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Title': '正常投资'}
+2019-07-26 15:48:29,075-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'data': None, 'status': 0, 'msg': '密码错误', 'code': ''}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:50:26,428-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:50:26,431-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'CaseId': 1, 'Method': 'get', 'ExpectedResult': None, 'sql': None, 'Title': '正常登陆'}
+2019-07-26 15:50:26,526-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:50:26,776-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:50:26,778-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Module': 'Invest', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'CaseId': 2, 'Method': 'post', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Title': '正常投资'}
+2019-07-26 15:50:27,251-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'code': '', 'msg': '密码错误', 'status': 0, 'data': None}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:51:33,259-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:51:33,261-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'sql': None, 'Module': 'login', 'CaseId': 1, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'ExpectedResult': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Title': '正常登陆', 'Method': 'get'}
+2019-07-26 15:51:33,347-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:51:33,402-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:51:33,403-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Module': 'Invest', 'CaseId': 2, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Title': '正常投资', 'Method': 'post'}
+2019-07-26 15:51:33,884-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:52:01,777-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:52:01,779-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'login', 'sql': None, 'Title': '正常登陆', 'CaseId': 1, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Method': 'get', 'ExpectedResult': None}
+2019-07-26 15:52:01,876-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:52:02,113-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:52:02,114-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'Invest', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Title': '正常投资', 'CaseId': 2, 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Method': 'post', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}'}
+2019-07-26 15:52:02,642-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'status': 0, 'code': '', 'msg': '密码错误', 'data': None}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:54:08,268-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:54:08,269-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'Title': '正常登陆', 'sql': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'ExpectedResult': None, 'Method': 'get', 'Module': 'login', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login'}
+2019-07-26 15:54:08,354-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:54:08,592-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:54:08,593-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'Title': '正常投资', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Method': 'post', 'Module': 'Invest', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan'}
+2019-07-26 15:54:09,010-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'msg': '密码错误', 'data': None, 'code': '', 'status': 0}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-26 15:55:25,526-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:55:25,528-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': None, 'Method': 'get', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'Module': 'login', 'CaseId': 1, 'sql': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}"}
+2019-07-26 15:55:25,624-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:55:25,859-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:55:25,860-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Method': 'post', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Title': '正常投资', 'Module': 'Invest', 'CaseId': 2, 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}"}
+2019-07-26 15:55:26,295-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != '{"status":0,"code":"","data":null,"msg":"密码错误"}'
+2019-07-26 15:55:55,570-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-26 15:55:55,572-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'login', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'CaseId': 1, 'ExpectedResult': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'sql': None, 'Method': 'get', 'Title': '正常登陆'}
+2019-07-26 15:55:55,657-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-26 15:55:55,887-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-26 15:55:55,889-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'Invest', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'CaseId': 2, 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Method': 'post', 'Title': '正常投资'}
+2019-07-26 15:55:56,549-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'code': '', 'msg': '密码错误', 'status': 0, 'data': None}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '', 'data': None, 'msg': '密码错误', 'status': 0}
+2019-07-29 18:23:33,418-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-29 18:23:33,438-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'sql': None, 'Module': 'login', 'Title': '正常登陆', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'ExpectedResult': None, 'CaseId': 1}
+2019-07-29 18:23:33,513-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-29 18:23:33,894-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-29 18:23:33,917-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Module': 'Invest', 'Title': '正常投资', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'CaseId': 2}
+2019-07-29 18:23:34,374-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'data': None, 'status': 0, 'code': '11008', 'msg': '不存在该用户'}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}
+2019-07-29 18:28:49,899-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-29 18:28:49,911-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': None, 'Method': 'get', 'Module': 'login', 'sql': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'CaseId': 1}
+2019-07-29 18:28:49,986-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-29 18:28:50,256-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-29 18:28:50,272-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Method': 'post', 'Module': 'Invest', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Title': '正常投资', 'CaseId': 2}
+2019-07-29 18:28:50,756-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'status': 0, 'code': '11008', 'data': None, 'msg': '不存在该用户'}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}
+2019-07-29 18:29:52,411-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-29 18:29:52,426-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}", 'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Module': 'login', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'sql': "{'status':1,'code':'10001','data': None,'msg':'登录成功'}"}
+2019-07-29 18:29:52,496-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第2条测试用例：正常充值
+2019-07-29 18:29:52,508-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'ExpectedResult': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}', 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':'10000'}", 'Module': 'recharge', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/recharge', 'Title': '正常充值', 'sql': '{"status":1,"code":"10001","data":{"id":84,"regname":"lemoncp","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"18574379913","leaveamount":"90000.00","type":"1","regtime":"2019-07-15 15:05:07.0"},"msg":"充值成功"}'}
+2019-07-29 18:29:52,572-INFO-my_log.py-api-log-[日志信息]:------正在测试recharge模里面第3条测试用例：不输入充值金额
+2019-07-29 18:29:52,582-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 3, 'ExpectedResult': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}', 'Method': 'post', 'Params': "{'mobilephone':'18574379913','amount':''}", 'Module': 'recharge', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/recharge', 'Title': '不输入充值金额', 'sql': '{"status":0,"code":"20115","data":None,"msg":"请输入金额"}'}
+2019-07-29 18:31:40,259-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-29 18:31:40,272-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'ExpectedResult': None, 'sql': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'Title': '正常登陆', 'Method': 'get'}
+2019-07-29 18:31:40,285-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-29 18:31:40,298-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Module': 'Invest', 'Title': '正常投资', 'Method': 'post'}
+2019-07-29 18:39:17,898-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-29 18:39:17,905-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 1, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'Method': 'get', 'Module': 'login', 'sql': None, 'ExpectedResult': None, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}"}
+2019-07-29 18:39:17,980-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-29 18:39:18,241-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-29 18:39:18,250-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'CaseId': 2, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Title': '正常投资', 'Method': 'post', 'Module': 'Invest', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}"}
+2019-07-29 18:39:18,656-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'msg': '不存在该用户', 'data': None, 'code': '11008', 'status': 0}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}
+2019-07-30 13:50:28,183-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-30 13:50:28,203-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'CaseId': 1, 'Title': '正常登陆', 'Module': 'login', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Method': 'get', 'ExpectedResult': None, 'sql': None}
+2019-07-30 13:50:28,264-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-30 13:50:28,611-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-30 13:50:28,627-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'CaseId': 2, 'Title': '正常投资', 'Module': 'Invest', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Method': 'post', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}'}
+2019-07-30 13:50:29,099-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'status': 0, 'code': '11008', 'data': None, 'msg': '不存在该用户'}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}
+2019-07-30 13:50:43,321-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-30 13:50:43,335-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'login', 'ExpectedResult': None, 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Title': '正常登陆', 'Method': 'get', 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'sql': None, 'CaseId': 1}
+2019-07-30 13:50:43,410-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-30 13:50:43,705-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-30 13:50:43,723-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Module': 'Invest', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Title': '正常投资', 'Method': 'post', 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'CaseId': 2}
+2019-07-30 13:50:44,203-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'code': '11008', 'status': 0, 'msg': '不存在该用户', 'data': None}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}
+2019-07-30 13:50:52,268-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第1条测试用例：正常登陆
+2019-07-30 13:50:52,284-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'get', 'sql': None, 'ExpectedResult': None, 'CaseId': 1, 'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Title': '正常登陆', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/login', 'Module': 'login'}
+2019-07-30 13:50:52,351-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：eval() arg 1 must be a string, bytes or code object
+2019-07-30 13:50:52,624-INFO-my_log.py-api-log-[日志信息]:------正在测试Invest模里面第2条测试用例：正常投资
+2019-07-30 13:50:52,641-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Method': 'post', 'sql': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'ExpectedResult': '{\'sql\':\'select LeaveAmount from member where mobilephone = "18574379913"\'}', 'CaseId': 2, 'Params': "{'memberId':'70','password':'123456','loanId':22,'amount':10000}", 'Title': '正常投资', 'Url': 'http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan', 'Module': 'Invest'}
+2019-07-30 13:50:53,125-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'} != {'msg': '不存在该用户', 'status': 0, 'code': '11008', 'data': None}
+- {'sql': 'select LeaveAmount from member where mobilephone = "18574379913"'}
++ {'code': '11008', 'data': None, 'msg': '不存在该用户', 'status': 0}

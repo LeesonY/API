@@ -1,0 +1,60 @@
+2019-07-18 09:47:33,647-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第1条测试用例：正常注册
+2019-07-18 09:47:33,648-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379914','pwd':'123456','regname':'lemonchupan'}", 'Method': 'get', 'Title': '正常注册', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 1, 'ExpectedResult': "{'msg': '手机号码已被注册', 'status': 0, 'data': None, 'code': '20110'}"}
+2019-07-18 09:47:33,896-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号码已被注册', 'code': '20110', 'status': 0, 'data': None}
+2019-07-18 09:47:33,897-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第2条测试用例：手机号为空
+2019-07-18 09:47:33,899-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'','pwd':'123456','regname':'lemonchupan'}", 'Method': 'get', 'Title': '手机号为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 2, 'ExpectedResult': "{'data': None, 'status': 0, 'code': '20103', 'msg': '手机号不能为空'}"}
+2019-07-18 09:47:34,126-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号不能为空', 'code': '20103', 'status': 0, 'data': None}
+2019-07-18 09:47:34,127-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第3条测试用例：密码长度小于6
+2019-07-18 09:47:34,128-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'12345','regname':'lemonchupan'}", 'Method': 'post', 'Title': '密码长度小于6', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 3, 'ExpectedResult': "{'status':0,'code':'20108','data': None,'msg':'密码长度必须为6~18'}"}
+2019-07-18 09:47:34,349-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '密码长度必须为6~18', 'code': '20108', 'status': 0, 'data': None}
+2019-07-18 09:47:34,355-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第4条测试用例：手机号小于11位
+2019-07-18 09:47:34,356-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'1857437993','pwd':'12345','regname':'lemonchupan'}", 'Method': 'post', 'Title': '手机号小于11位', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 4, 'ExpectedResult': "{'status':0,'code':'20109','data': None,'msg':'手机号码格式不正确'}"}
+2019-07-18 09:47:34,422-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '手机号码格式不正确', 'code': '20109', 'status': 0, 'data': None} != {'msg': '密码长度必须为6~18', 'code': '20108', 'status': 0, 'data': None}
+- {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?               ^                         ^^^ ^^^^^
+
++ {'code': '20108', 'data': None, 'msg': '密码长度必须为6~18', 'status': 0}
+?               ^                         ^ ^^^^^^^^^
+
+2019-07-18 09:47:34,587-INFO-my_log.py-api-log-[日志信息]:------正在测试Register模里面第5条测试用例：已注册手机号再次注册
+2019-07-18 09:47:34,588-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456','regname':'lemonchupan'}", 'Method': 'post', 'Title': '已注册手机号再次注册', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/register', 'Module': 'Register', 'CaseId': 5, 'ExpectedResult': "{'status':0,'code':'20110','data': None,'msg':'手机号码已被注册'}"}
+2019-07-18 09:47:34,850-INFO-my_log.py-api-log-[日志信息]:实际结果为：{'msg': '手机号码已被注册', 'code': '20110', 'status': 0, 'data': None}
+2019-07-18 09:47:34,854-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第6条测试用例：正常登陆
+2019-07-18 09:47:34,857-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'123456'}", 'Method': 'post', 'Title': '正常登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 6, 'ExpectedResult': "{'status':1,'code':'10001','data': None,'msg':'成功'}"}
+2019-07-18 09:47:34,920-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '成功', 'code': '10001', 'status': 1, 'data': None} != {'msg': '登录成功', 'code': '10001', 'status': 1, 'data': None}
+- {'code': '10001', 'data': None, 'msg': '成功', 'status': 1}
++ {'code': '10001', 'data': None, 'msg': '登录成功', 'status': 1}
+?                                         ++
+
+2019-07-18 09:47:35,080-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第7条测试用例：用户名输入为空
+2019-07-18 09:47:35,081-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'','pwd':'123456'}", 'Method': 'post', 'Title': '用户名输入为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 7, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-18 09:47:35,148-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '参数错误：参数不能为空', 'code': '20103', 'status': 0, 'data': None} != {'msg': '手机号不能为空', 'code': '20103', 'status': 0, 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?                                         ^^^
+
+2019-07-18 09:47:35,314-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第8条测试用例：密码输入为空
+2019-07-18 09:47:35,315-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':''}", 'Method': 'post', 'Title': '密码输入为空', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 8, 'ExpectedResult': "{'status':0,'code':'20103','data': None,'msg':'参数错误：参数不能为空'}"}
+2019-07-18 09:47:35,379-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '参数错误：参数不能为空', 'code': '20103', 'status': 0, 'data': None} != {'msg': '密码不能为空', 'code': '20103', 'status': 0, 'data': None}
+- {'code': '20103', 'data': None, 'msg': '参数错误：参数不能为空', 'status': 0}
+?                                         ^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?                                         ^^
+
+2019-07-18 09:47:35,547-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第9条测试用例：正确的用户名，对应密码错误
+2019-07-18 09:47:35,548-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'18574379913','pwd':'1234567'}", 'Method': 'post', 'Title': '正确的用户名，对应密码错误', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 9, 'ExpectedResult': "{'status':0,'code':'20111','data': None,'msg':'用户名或者密码错误'}"}
+2019-07-18 09:47:35,623-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '用户名或者密码错误', 'code': '20111', 'status': 0, 'data': None} != {'msg': '用户名或密码错误', 'code': '20111', 'status': 0, 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+2019-07-18 09:47:35,790-INFO-my_log.py-api-log-[日志信息]:------正在测试login模里面第10条测试用例：未注册手机号登陆
+2019-07-18 09:47:35,792-INFO-my_log.py-api-log-[日志信息]:测试数据是：{'Params': "{'mobilephone':'13786268722','pwd':'123457'}", 'Method': 'get', 'Title': '未注册手机号登陆', 'Url': 'http://39.105.94.71:8080/futureloan/mvc/api/member/login', 'Module': 'login', 'CaseId': 10, 'ExpectedResult': "{'status':0,'code':'20111','data': None,'msg':'用户名或者密码错误'}"}
+2019-07-18 09:47:35,860-CRITICAL-my_log.py-api-log-[日志信息]:http请求出错了，错误是：{'msg': '用户名或者密码错误', 'code': '20111', 'status': 0, 'data': None} != {'msg': '用户名或密码错误', 'code': '20111', 'status': 0, 'data': None}
+- {'code': '20111', 'data': None, 'msg': '用户名或者密码错误', 'status': 0}
+?                                             -
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
