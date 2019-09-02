@@ -1,5 +1,9 @@
 #-*- coding: utf-8 -*-
 
+import sys
+sys.path.append('./')#project根目录地址
+print(sys.path)
+
 import unittest
 from API_8.testcases import test_register
 from API_8.testcases import test_login
