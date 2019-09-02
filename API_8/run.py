@@ -2,7 +2,7 @@
 
 import sys
 sys.path.append('./')#project根目录地址
-print(sys.path)
+print('在这里看：',sys.path)
 
 import unittest
 from API_8.testcases import test_register
