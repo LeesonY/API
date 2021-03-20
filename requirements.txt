@@ -9,7 +9,7 @@ html-testRunner==1.2
 idna==2.8
 importlib-metadata==0.18
 jdcal==1.4.1
-Jinja2==2.9.5
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 more-itertools==7.1.0
 mysql-connector-python==8.0.16
